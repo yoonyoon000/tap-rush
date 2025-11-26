@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://clickbattle2025.web.app/click-battle.js"></script>
+    <script>ClickBattle.init("YOON");</script>
+    <title>연타 마스터</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="level-header">
+            <p class="game-name">Timing Master</p>
+            <h1 class="level-title">연타 마스터</h1>
+            <p class="instruction">
+                배경이 <span class="blue-word">파란색</span>이 되는 순간에 맞춰 버튼을 클릭하는<br>
+                타이밍 & 연타 게임입니다.
+            </p>
+            <p class="sub-instruction">
+                파란색이 되는 순간에만 <strong>게임 시작</strong> 버튼이 활성화됩니다.
+            </p>
+        </header>
+
+        <main class="main-area">
+            <!-- 처음에는 비활성화 -->
+            <button id="startBtn" class="primary-btn" disabled>게임 시작</button>
+        </main>
+
+        <section class="info-bar">
+            <div class="info-item">
+                <span class="label">레벨 수:</span>
+                <span class="value">5</span>
+            </div>
+            <div class="info-item">
+                <span class="label">기록:</span>
+                <span class="value">엔딩 화면에서 확인</span>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

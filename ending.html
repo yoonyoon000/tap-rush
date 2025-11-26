@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://clickbattle2025.web.app/click-battle.js"></script>
+    <script>ClickBattle.init("YOON");</script>
+    <title>연타 마스터 - 결과</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="level-header">
+            <p class="game-name">연타 마스터</p>
+            <h1 class="level-title">나만의 리더보드</h1>
+            <p class="instruction">
+                이 브라우저에서만 저장되는 <strong>개인 기록</strong>입니다.<br>
+                각 레벨의 정확도와 연타 수를 확인해보세요.
+            </p>
+        </header>
+
+        <main class="end-main">
+            <section class="summary-card">
+                <h2>전체 요약</h2>
+                <p class="summary-line">
+                    전체 평균 정확도:
+                    <span id="overallAccuracy" class="summary-highlight">-</span>
+                </p>
+                <p class="summary-line">
+                    총 성공 연타:
+                    <span id="overallSuccess" class="summary-highlight">-</span>
+                </p>
+                <p class="summary-line">
+                    총 미스:
+                    <span id="overallMiss" class="summary-highlight">-</span>
+                </p>
+            </section>
+
+            <section class="table-card">
+                <h2>레벨별 기록</h2>
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            <th>레벨</th>
+                            <th>정확도</th>
+                            <th>성공 연타</th>
+                            <th>미스</th>
+                            <th>마지막 기록</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTableBody">
+                        <!-- JS에서 채움 -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="end-footer">
+            <button id="restartBtn" class="primary-btn">처음부터 하기</button>
+            <button id="retryLastBtn" class="secondary-btn">레벨 5 다시 도전</button>
+        </footer>
+    </div>
+
+    <script type="module" src="./src/ending.js"></script>
+</body>
+
+</html>

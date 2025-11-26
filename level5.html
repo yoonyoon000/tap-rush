@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://clickbattle2025.web.app/click-battle.js"></script>
+    <script>ClickBattle.init("YOON");</script>
+    <title>연타 마스터 - Level 5</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="level-header">
+            <p class="game-name">연타 마스터</p>
+            <h1 class="level-title">LEVEL 5</h1>
+            <p class="instruction">
+                파란색이 <span class="blue-word">아주 짧게, 연속으로</span> 나타납니다.<br>
+                보이는 순간마다 전력으로 연타해보세요!
+            </p>
+            <p class="sub-instruction">
+                총 <strong>15번</strong>의 파란 구간 중<br>
+                <strong>10번 이상</strong> 반응하면 클리어입니다.
+            </p>
+        </header>
+
+        <main class="main-area">
+            <button id="tapBtn" class="primary-btn">TAP</button>
+        </main>
+
+        <section class="info-bar">
+            <div class="info-item">
+                <span class="label">성공 구간:</span>
+                <span id="hitPhases" class="value">0</span>
+                <span class="value">/ 15</span>
+            </div>
+            <div class="info-item">
+                <span class="label">총 클릭:</span>
+                <span id="tapCount" class="value">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">미스:</span>
+                <span id="missCount" class="value">0</span>
+            </div>
+        </section>
+    </div>
+
+    <section id="resultOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h2 id="resultTitle">결과</h2>
+            <p class="result-text">
+                총 <strong id="resultCount">0회</strong> 클릭했습니다.
+            </p>
+            <p id="resultMessage" class="result-message"></p>
+            <div class="overlay-buttons">
+                <button id="retryBtn" class="secondary-btn">다시하기</button>
+                <button id="homeBtn" class="primary-btn">리더보드 보기</button>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./src/level5.js"></script>
+</body>
+
+</html>

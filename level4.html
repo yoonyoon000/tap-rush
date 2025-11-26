@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://clickbattle2025.web.app/click-battle.js"></script>
+    <script>ClickBattle.init("YOON");</script>
+    <title>연타 마스터 - Level 4</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="level-header">
+            <p class="game-name">연타 마스터</p>
+            <h1 class="level-title">LEVEL 4</h1>
+            <p class="instruction">
+                일정한 <strong class="blue-word">박자</strong>로 파란색이 켜집니다.<br>
+                파란색이 켜지는 순간마다 박자에 맞춰 연타하세요!
+            </p>
+            <p class="sub-instruction">
+                12개의 박자 중 <strong>8개 이상</strong> 성공하면 클리어입니다.
+            </p>
+        </header>
+
+        <main class="main-area">
+            <button id="tapBtn" class="primary-btn">TAP</button>
+        </main>
+
+        <section class="info-bar">
+            <div class="info-item">
+                <span class="label">박자 성공:</span>
+                <span id="beatSuccess" class="value">0</span>
+                <span class="value">/ 12</span>
+            </div>
+            <div class="info-item">
+                <span class="label">총 클릭:</span>
+                <span id="tapCount" class="value">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">미스:</span>
+                <span id="missCount" class="value">0</span>
+            </div>
+        </section>
+    </div>
+
+    <section id="resultOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h2 id="resultTitle">결과</h2>
+            <p class="result-text">
+                총 <strong id="resultCount">0회</strong> 클릭했습니다.
+            </p>
+            <p id="resultMessage" class="result-message"></p>
+            <div class="overlay-buttons">
+                <button id="retryBtn" class="secondary-btn">다시하기</button>
+                <button id="nextBtn" class="primary-btn">다음 레벨</button>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./src/level4.js"></script>
+</body>
+
+</html>
